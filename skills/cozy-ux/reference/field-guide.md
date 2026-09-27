@@ -1,6 +1,6 @@
 # The Norman field guide, applied to apps
 
-This is the lens every `don-norman` command reads first. It takes the framework of *The Design of
+This is the lens every `cozy-ux` command reads first. It takes the framework of *The Design of
 Everyday Things* (2013 revised edition — the one that says **discoverability** and **signifiers**),
 *Emotional Design* (2004) and *Living with Complexity* (2010), and points it at the one artifact
 you actually audit: **a person trying to do something with a screen someone built.** The examples

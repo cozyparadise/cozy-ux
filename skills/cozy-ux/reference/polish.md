@@ -12,7 +12,7 @@ P0/P1, say so and send the user there first.
 
 ## Pull in the prior audit
 
-If `/don-norman audit` has run on this target, its P2/P3 findings, its instruction-word count,
+If `/cozy-ux audit` has run on this target, its P2/P3 findings, its instruction-word count,
 and its "already working" list are your backlog and your do-not-break list. Start there. If not,
 do a quick walk yourself (field guide §2 per control) so you're polishing against the real
 loops, not a guess.
@@ -71,5 +71,5 @@ walk.
 In your summary, list the sentences removed (with the signifier that replaced each, where one was
 needed), the consequence lines kept, the loops tightened, and the instruction-word count before
 and after. If you left something because it's really a voice or taste matter, name the owner
-rather than reaching outside Norman's lane. Suggest a final `/don-norman audit <target>` to
+rather than reaching outside Norman's lane. Suggest a final `/cozy-ux audit <target>` to
 confirm the score moved and nothing regressed.

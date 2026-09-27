@@ -82,6 +82,6 @@ a neighboring screen first; follow the project's CLAUDE.md or AGENTS.md). Every 
 the cover test (§5) must pass before you call it done. Run the project's gates (typecheck, lint,
 build).
 
-Hand off: suggest `/don-norman audit <target>` on the built thing — in the browser, with
+Hand off: suggest `/cozy-ux audit <target>` on the built thing — in the browser, with
 screenshots — to confirm the loops close in practice. If a real person can be watched doing the
 task, that beats the audit; say so.

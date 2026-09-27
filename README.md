@@ -1,4 +1,4 @@
-# don-norman — a usability skill for Claude
+# cozy-ux — a usability skill for Claude, built on Don Norman's principles
 
 A Claude skill that reviews any screen or flow the way Don Norman would. It walks the interface
 as a first-time person, finds where they can't tell what to do (Gulf of Execution) or can't tell
@@ -29,19 +29,19 @@ intuitive?", "there's too much helper text here."
 Claude Code:
 
 ```bash
-git clone https://github.com/cozyparadise/don-norman-skill
-cp -R don-norman-skill/skills/don-norman ~/.claude/skills/
+git clone https://github.com/cozyparadise/cozy-ux
+cp -R cozy-ux/skills/cozy-ux ~/.claude/skills/
 ```
 
-Then run `/don-norman audit <screen>` or ask Claude to "run Norman on" a screen.
+Then run `/cozy-ux audit <screen>` or ask Claude to "run Norman on" a screen.
 
-Claude.ai / Claude Desktop: zip the `skills/don-norman` folder and upload it under
+Claude.ai / Claude Desktop: zip the `skills/cozy-ux` folder and upload it under
 Settings → Capabilities → Skills.
 
 ## What's in it
 
 ```
-skills/don-norman/
+skills/cozy-ux/
 ├── SKILL.md                    # entry point, the lens, routing
 └── reference/
     ├── field-guide.md          # Norman's framework applied to app screens (read by every command)

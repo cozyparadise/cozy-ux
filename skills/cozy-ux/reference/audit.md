@@ -124,7 +124,7 @@ right spot. This marks the patterns to preserve when other commands edit.
 
 ### 5. Recommended next moves
 A short ordered list of commands to run, mapped from the blockers, highest severity first. End
-with `/don-norman audit <target>` again after fixes to see the score move.
+with `/cozy-ux audit <target>` again after fixes to see the score move.
 
 ## Rules
 

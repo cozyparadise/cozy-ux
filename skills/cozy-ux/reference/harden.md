@@ -87,5 +87,5 @@ browser where possible — and confirm the constraint is *seen*, the undo is *fi
 gate's release is *visible*.
 
 In your summary, list each risk, its kind (slip / mistake / irreversible), and what you changed —
-or why you left it and pointed elsewhere. Hand off to `/don-norman polish <target>` for the final
-pass, or `/don-norman audit` to confirm the error-design axis moved.
+or why you left it and pointed elsewhere. Hand off to `/cozy-ux polish <target>` for the final
+pass, or `/cozy-ux audit` to confirm the error-design axis moved.
