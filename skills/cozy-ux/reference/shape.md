@@ -36,14 +36,18 @@ be audited later because there's nothing to measure against.
 
 ## Phase 2: the loops — every action closes, and nothing needs a manual
 
-Now design the screen or sequence. Each action is one Seven-Stages loop (field guide §2); a flow
-is loops in series (§12). Design so every loop closes and nothing on the screen needs a sentence.
+Now design the screen or sequence. Each action is one loop (STANDARDS §2); a flow is loops
+in series (§11). Design so every loop closes and nothing on the screen needs a sentence.
 
 For each screen, decide:
 
+- **Its type** (list, detail, form, editor, settings, search, empty state) and that type's
+  convention. An accidental hybrid has nothing to lean on (§5).
 - **The one thing this screen is for**, and the one control that does it — the single filled
   shape. Everything else is quieter.
 - **What is visible by looking:** which state, whose scope (mine / everyone's), where I am.
+- **What is shown now and what waits** one level deeper (§5, progressive disclosure). Group
+  with space before boxes (§4).
 - **What is offered:** only the possible (constraints); the obvious choice already made
   (defaults); the action on the thing it acts on (mapping).
 - **What each control signifies on its own** — button, field, drop target, editable thing. If
@@ -54,6 +58,9 @@ For each screen, decide:
   What the failure says, in the person's terms, with the next action attached.
 - **The failure it must avoid:** the slip or mistake most likely here; design it out now with a
   constraint, a separation, an undo, a name on the control.
+
+Check every screen against §12 before the brief: contrast, color-only state, keyboard,
+larger text, Reduce Motion, and §8 target sizes.
 
 For a flow, also: the truthful start (what it takes, costs, returns, how long), the ramp before
 commitment, the hand-off screens that must stand alone, and the end that says what is now true.
@@ -79,7 +86,7 @@ building.
 
 Build into the project's real source, matching its structure, conventions, and copy rules (read
 a neighboring screen first; follow the project's CLAUDE.md or AGENTS.md). Every loop you build must close as declared in the brief, and
-the cover test (§5) must pass before you call it done. Run the project's gates (typecheck, lint,
+the cover test (§6) must pass before you call it done. Run the project's gates (typecheck, lint,
 build).
 
 Hand off: suggest `/cozy-ux audit <target>` on the built thing — in the browser, with

@@ -2,7 +2,7 @@
 
 The flagship command. Read-only: you diagnose and report, you do not edit. The deliverable is a
 specific, ranked list of the exact spots where a person's action loop fails, each named at the
-control or step and tied to the Norman principle it breaks, plus the count of words they would
+control or step and tied to the standard it breaks, plus the count of words they would
 have to read to get through. `harden` and `polish` fix them later.
 
 "As specific as you can" is the whole job. A finding that doesn't name the control and quote
@@ -11,38 +11,41 @@ its content is not a finding.
 ## Method: walk every action in order, in character
 
 You have the rendered truth of the target (screens, controls, states, text — from source, the
-browser, or screenshots) and the field guide. Now become the person — the coldest plausible one:
+browser, or screenshots) and STANDARDS.md. Now become the person — the coldest plausible one:
 first time here, on a phone, mid-distraction, holding one goal — and walk from arrival to the
 goal, one action at a time. Do not skim to the interesting screens; gulfs hide in the boring
 ones (the settings page that opens with a paragraph, the Save that says nothing).
 
-For each screen, and each control on it that the goal touches, run the loop (field guide §2):
+For each screen, and each control on it that the goal touches, run the loop (STANDARDS §2):
 
 1. **Name it** — route or screen, the control, and a short quote of its label or content so
    the finding is locatable.
 2. **Goal / intention:** what does the person want, and can they tell what this screen wants of
-   them *by looking*? (Gulf of Execution; signifiers, §4.)
-3. **Execute:** can they do it without slipping? (Look-alikes, tiny targets, a destructive
-   control where the finger lands.)
+   them *by looking*? (Gulf of Execution; §5.)
+3. **Execute:** can they do it without slipping? (Look-alikes, targets under the §8
+   minimums, a destructive control where the finger lands, a press that shows nothing.)
 4. **Perceive / interpret / evaluate:** after they act, can they tell what happened and whether
-   it worked? (Gulf of Evaluation; feedback, §11.)
+   it worked? (Gulf of Evaluation; §9.)
 5. **Model check:** does this screen build the right conceptual model and nothing false? Is it
    consistent with the screens around it? Is scope visible — mine or everyone's, now or future?
-6. **Memory check:** does it need a fact from a screen the person left? (§6)
-7. **The manual check (§5):** for every sentence on the screen that is not a label on a
+6. **Memory check:** does it need a fact from a screen the person left? (§7)
+7. **The manual check (§6):** for every sentence on the screen that is not a label on a
    control, classify it — *instruction* or *consequence* — and run the cover test: hide it;
    does the flow still walk? Count the instruction words. Each instruction sentence is a
    finding whose real subject is the control it was covering for.
+8. **Access check (§12):** text contrast, color-only state, keyboard reach and visible
+   focus, layout at larger text, Reduce Motion. Measure what you can (contrast from the
+   real colors, target sizes from the real styles) and say what you could not.
 
-Then zoom out and run the **arc-level checks** (§12) on the flow as a whole, and the **surface
-cheat sheet** (§13) against each screen type you met.
+Then zoom out and run the **flow standards** (§11) on the flow as a whole, and the **surface
+checklist** (§15) against each screen type you met.
 
 **If you authored any of this** — the copy, the control, the layout — say so in the report and
 run step 7 literally rather than from memory. The author of a sentence can always justify it.
 
 **Final consideration — the visceral pass (rendered targets only).** Finish by running the
-glance battery from [visceral-guide.md](visceral-guide.md) §5 on the key screen(s): 2-second
-test, squint test, bold-words-only read, signifier check, density at the decision, affect read.
+glance battery from [glance.md](glance.md) on the key screen(s): 2-second test, squint test,
+bold-words-only read, signifier check, density and calm, affect read.
 The behavioral walk scores whether each loop closes; this pass scores whether the ~50 ms
 appearance verdict lets the person reach the first loop at all. Skip it only for targets with
 no rendered surface, and say so.
@@ -50,9 +53,9 @@ no rendered surface, and say so.
 Keep a running list. Most controls produce zero findings; that's correct. Flag only real loop
 failures, not style preferences.
 
-## Scoring: the Six Gulfs Scorecard
+## Scoring: the Usability Scorecard
 
-Score the target 0–4 on each of six lenses. Be honest; a 4 is genuinely excellent, and most real
+Score the target 0–4 on each of seven lenses. Be honest; a 4 is genuinely excellent, and most real
 screens land 2–3 on their weak axes. The score exists to make the weak axis obvious and to show
 movement on re-audit, not to reward a number.
 
@@ -64,9 +67,10 @@ movement on re-audit, not to reward a number.
 | 4 | Feedback | Save says nothing; waits show a spinner; failures are generic; success lands off-screen | Immediate, specific, located feedback that closes every loop; waits and failures speak in the person's terms |
 | 5 | Knowledge in the world (memory load) | An action needs a fact from a screen the person left; IDs copied by hand; scope invisible | Defaults, constraints, visible state, and previews carry what each action needs, where it happens |
 | 6 | Error design | Delete beside Edit; "Are you sure?" instead of undo; gates with no visible release; a good-faith action punished | Slips constrained, mistakes designed out, undo where possible, every forcing function has a reachable release |
+| 7 | Access | Low-contrast text; state shown by color alone; controls unreachable by keyboard; layout breaks at larger text; motion ignores Reduce Motion | Meets every §12 standard and the §8 target sizes; works by touch, pointer, keyboard and assistive tech |
 
-**Score bands** (out of 24): 22–24 excellent (ship, minor polish) · 17–21 good (fix the weak
-axes) · 11–16 rough (real work before a person is served) · 0–10 broken (the loop fails
+**Score bands** (out of 28): 26–28 excellent (ship, minor polish) · 20–25 good (fix the weak
+axes) · 13–19 rough (real work before a person is served) · 0–12 broken (the loop fails
 somewhere central; redesign that stretch).
 
 ## The report
@@ -88,9 +92,10 @@ consequences? Name the single biggest gulf up front.
 | 4 | Feedback | ?/4 | |
 | 5 | Knowledge in the world | ?/4 | |
 | 6 | Error design | ?/4 | |
-| **Total** | | **??/24** | **[band]** |
+| 7 | Access | ?/4 | [what was measured vs assumed] |
+| **Total** | | **??/28** | **[band]** |
 
-For rendered targets, follow with the **Visceral Scorecard** (5 lenses, 0–20 — format in
+For rendered targets, follow with the **Glance Scorecard** (5 lenses, 0–20 — format in
 [glance.md](glance.md)). The two cards stay separate — different levels of processing — but the
 verdict in §1 draws on both, and visceral findings merge into §3's ranked list labeled by level.
 A visceral P0 outranks a behavioral P1 on the same screen: the person never reaches it.
@@ -118,7 +123,7 @@ tell if they succeeded · P2 friction with a workaround · P3 polish. Reserve P0
 breaks; if everything is P0, nothing is.
 
 ### 4. What's already working
-Two or three things the target does *right* by Norman's lights, specifically — the signifier
+Two or three things the target does *right* by the standards, specifically — the signifier
 that carries, the constraint that makes the wrong action impossible, the consequence line at the
 right spot. This marks the patterns to preserve when other commands edit.
 
@@ -136,6 +141,6 @@ with `/cozy-ux audit <target>` again after fixes to see the score move.
   still need reading to use; the number makes that visible and shows movement on re-audit.
 - **Don't invent blockers to fill the report.** Three real gulfs and a 20/24 beats a padded list
   of P3 nitpicks. Noise buries the P0.
-- **Stay in Norman's lane.** Taste, prose rhythm, and brand voice belong elsewhere; when a
+- **Stay in the standards' lane.** Taste, prose rhythm, and brand voice belong elsewhere; when a
   finding is really one of those, say which owner has it and move on. Your domain is whether the
   thing *works* for a human with no manual.

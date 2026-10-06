@@ -1,60 +1,56 @@
-# cozy-ux — a usability skill for Claude, built on Don Norman's principles
+# cozy-ux
 
-A Claude skill that reviews any screen or flow the way Don Norman would. It walks the interface
-as a first-time person, finds where they can't tell what to do (Gulf of Execution) or can't tell
-whether it worked (Gulf of Evaluation), and names the exact control that failed.
-
-Its sharpest rule: **if a control needs a sentence under it to be used, the control failed.** It
-sorts every piece of on-screen text into *instruction* (delete it, fix the control) or
-*consequence* (keep it, one line, at the point of action).
-
-Built from *The Design of Everyday Things* (2013), *Emotional Design* (2004), and *Living with
-Complexity* (2010). Unofficial — not affiliated with or endorsed by Don Norman.
-
-## Commands
-
-| Command | What it does |
-|---|---|
-| `audit [screen or flow]` | Read-only. Walks every action, scores six lenses (0–24), ranks blockers P0–P3, counts instruction words. |
-| `glance [screen]` | Read-only. Judges one rendered screen at 2-second scan speed: squint test, bold-words-only read, signifiers, density. |
-| `shape [idea]` | Designs a new screen or flow before any code: the person, the one-sentence model, every action loop. Stops for your OK before building. |
-| `harden [target]` | Error-proofs what exists: slips vs mistakes, constraints, undo over "Are you sure?", visible releases on every gate. Edits. |
-| `polish [target]` | Final pass: strips the manual, tightens feedback, mapping, and visible state. Edits, lightly. |
-
-Or just ask in plain words: "where would someone get stuck on the upload screen?", "is this
-intuitive?", "there's too much helper text here."
-
-## Install
-
-Claude Code, Codex, Cursor and other agents:
+UX standards an agent can check, from Don Norman's books and Apple's Human Interface Guidelines.
 
 ```bash
 npx skills add cozyparadise/cozy-ux
 ```
 
-Then run `/cozy-ux audit <screen>` or ask Claude to "run Norman on" a screen.
+Ask an agent to review a screen and you usually get vibes. "Feels a bit cluttered." "Could be more intuitive." This skill gives it rules to check instead, and makes every finding name the exact control that failed.
 
-Claude.ai / Claude Desktop: zip the `skills/cozy-ux` folder and upload it under
-Settings → Capabilities → Skills.
+The sharpest rule is that **a control needing a sentence under it has failed.** The skill sorts every line of on-screen text into two kinds. Instructions get deleted and the control gets fixed. Consequences, like "this can't be undone", stay as one line where the person acts. To settle it, hide the sentence and walk the flow again. If it still works, the sentence goes.
 
-## What's in it
+## What it checks
 
-```
-skills/cozy-ux/
-├── SKILL.md                    # entry point, the lens, routing
-└── reference/
-    ├── field-guide.md          # Norman's framework applied to app screens (read by every command)
-    ├── visceral-guide.md       # Emotional Design's visceral + reflective levels, scan-speed tests
-    ├── audit.md  glance.md  shape.md  harden.md  polish.md
-```
+| Standard | The test |
+| --- | --- |
+| First glance | In 2 seconds, what is it, who is it for, what do I do |
+| Calm | Space does the grouping. No card soup. One primary action |
+| Know what to do | Every control signals itself. Only the possible is offered |
+| No manual | Instruction text goes. Consequences stay, one line |
+| Do it | 44pt targets on iOS, 24px minimum on the web. Press shows instantly |
+| Know it worked | Feedback is immediate, specific, and where the eyes are |
+| Errors | Undo over "Are you sure?". Every gate has a way out |
+| Find the way | Where am I, where can I go, how do I get out |
+| Everyone | 4.5:1 text contrast. Never color alone. Text scales. Reduce Motion works |
+| Trust | Clear about what it does. Delight is earned, not added |
 
-## Provenance
+The full rules, with their sources tagged, are in [`STANDARDS.md`](skills/cozy-ux/STANDARDS.md).
 
-The Seven Stages, the Gulfs, signifiers, slips vs mistakes, design for error, and the three
-levels are Norman's. The scan-speed numbers (50 ms, 79% scan) come from Nielsen Norman Group and
-related research, cited as such. The instruction-vs-consequence split, the cover test, the
-scorecards, and the app translations are this skill's own.
+## Commands
+
+| Command | What you get |
+| --- | --- |
+| `audit` | Walks the screen or flow as a first-time person. Ranked blockers, a 7-lens score out of 28, and a count of the words someone must read to get through. Read-only |
+| `glance` | Judges one rendered screen at scan speed with the squint test and a bold-words-only read. Read-only |
+| `shape` | Plans a new screen or flow before code, then stops for your OK |
+| `harden` | Error-proofs what exists. Splits slips from mistakes, swaps confirms for undo, frees stuck gates |
+| `polish` | The last pass. Strips the manual and tightens feedback, state, and calm |
+
+Or ask in plain words. "Where would someone get stuck on upload?" "Is this accessible?" "There's too much helper text."
+
+## Where the rules come from
+
+- **Don Norman** gave the core loop. A person must be able to tell what to do and tell whether it worked. Signifiers, slips and mistakes, and design for error come from him.
+- **Apple's HIG** gave the eight design principles, calm hierarchy, and the numbers for target size, spacing, contrast, and text size. All were checked against Apple's pages in October 2026.
+- **WCAG 2.2** gave the web minimums, cited by number.
+- **Nielsen Norman Group** gave the scan-speed research and response-time limits.
+- **Emil Kowalski's** [`apple-design`](https://github.com/emilkowalski/skills) skill (MIT) shaped the web versions of Apple's material, type, and feedback guidance.
+
+The no-manual split, the cover test, the scorecards, and the screen checklists are this skill's own. Norman and Apple haven't reviewed or endorsed it.
+
+Motion craft lives in [tune-animations](https://github.com/cozyparadise/tune-animations).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT

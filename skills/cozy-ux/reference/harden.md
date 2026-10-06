@@ -2,7 +2,7 @@
 
 Use to error-proof what exists. Where `audit` finds gulfs, `harden` closes the ones about
 **error**: the spots where a person slips, gets trapped, is set up to make a mistake, or does
-something they can't take back. Norman's error framework (field guide §7–§8) is the whole method.
+something they can't take back. The error standards (STANDARDS §10) are the whole method.
 This command edits.
 
 Norman's governing idea: the best error message is the one that never fires, because the design
@@ -36,7 +36,7 @@ Tag each risk **slip**, **mistake**, or **irreversible**, because the fix differ
 **Slips → constraints, layout, and forcing functions.** The person already understood; don't add
 words. Instead:
 - Separate or differentiate look-alikes; make the destructive control look destructive and sit
-  apart; widen and space targets; keep the primary action clear of just-used controls.
+  apart; widen and space targets to the §8 minimums; keep the primary action clear of just-used controls.
 - Constrain the input: the field accepts only what belongs; the impossible option isn't offered.
 - Make the forgettable step impossible to forget — an interlock (can't leave with unsaved
   changes without a visible choice), a default that does the right thing, or a state that

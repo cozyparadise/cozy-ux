@@ -1,4 +1,4 @@
-# polish — the final Norman pass
+# polish — the final pass
 
 The last step, not the first. Use when the screen or flow is structurally sound and free of
 error-traps, and you want to strip the manual, close the last half-open gulfs, and make every
@@ -14,12 +14,12 @@ P0/P1, say so and send the user there first.
 
 If `/cozy-ux audit` has run on this target, its P2/P3 findings, its instruction-word count,
 and its "already working" list are your backlog and your do-not-break list. Start there. If not,
-do a quick walk yourself (field guide §2 per control) so you're polishing against the real
+do a quick walk yourself (STANDARDS §2 per control) so you're polishing against the real
 loops, not a guess.
 
 ## Polish in order of leverage
 
-**1. Strip the manual (field guide §5) — the highest-leverage polish on any app screen.**
+**1. Strip the manual (STANDARDS §6) — the highest-leverage polish on any app screen.**
 Take every sentence on the screen that is not a label on a control, and sort it:
 - **Instruction** (what a control is for, how to use it, what to pick, why this page exists) →
   delete it. Before deleting, ask what signifier it was covering for, and fix that if it is
@@ -54,9 +54,16 @@ enables the disabled button. If a state has to be explained, show it instead.
 (the person's, not the code's); the same shape for the same kind of thing; no screen where the
 framing shifts without a bridge. The end of a flow says what is now true.
 
+**6. Calm (§4).** Remove a container instead of adding an accent. Let space do the grouping.
+Keep one primary action per zone. Cut decoration with no structural job. Check that
+controls still look different from content after the cut.
+
+**7. Access sweep (§12).** Contrast on anything you touched, state that relies on color alone,
+focus visible, and the layout at larger text.
+
 ## The arc's peak and end
 
-Norman cares that frustration compounds and that endings colour the whole memory. Find the
+Frustration compounds and that endings colour the whole memory. Find the
 hardest moment in the flow and confirm the person gets relief there — a visible result, not a
 sentence. Confirm the end lands as "here is what happened and what you can do now," not a flat
 stop.
@@ -71,5 +78,5 @@ walk.
 In your summary, list the sentences removed (with the signifier that replaced each, where one was
 needed), the consequence lines kept, the loops tightened, and the instruction-word count before
 and after. If you left something because it's really a voice or taste matter, name the owner
-rather than reaching outside Norman's lane. Suggest a final `/cozy-ux audit <target>` to
+rather than reaching outside the standards' lane. Suggest a final `/cozy-ux audit <target>` to
 confirm the score moved and nothing regressed.
