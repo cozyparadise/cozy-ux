@@ -26,11 +26,10 @@ intuitive?", "there's too much helper text here."
 
 ## Install
 
-Claude Code:
+Claude Code, Codex, Cursor and other agents:
 
 ```bash
-git clone https://github.com/cozyparadise/cozy-ux
-cp -R cozy-ux/skills/cozy-ux ~/.claude/skills/
+npx skills add cozyparadise/cozy-ux
 ```
 
 Then run `/cozy-ux audit <screen>` or ask Claude to "run Norman on" a screen.
